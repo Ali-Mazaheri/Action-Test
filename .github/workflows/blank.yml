@@ -46,9 +46,13 @@ jobs:
 
       - name: myStep3
         run: echo myStepThree
-
+  
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
       - name: myStep4
-        run: echo ${{secrets.MYSECRETONE}}
+        run: echo ${{secrets.MYSECRETONE}}-`${{secrets.MYSECRETONE}}`-"${{secrets.MYSECRETONE}}"
 
       - name: myStep5
-        run: echo ${{secrets.GITHUB_TOKEN}}
+        run: echo ${{secrets.GITHUB_TOKEN}}-`${{secrets.GITHUB_TOKEN}}`-"${{secrets.GITHUB_TOKEN}}"
+
