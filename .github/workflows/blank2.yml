@@ -1,13 +1,13 @@
-name: CI
+name: CI2
 defaults:
   run:
     shell: bash
     working-directory: ./
 
 env:
-  TEST: myTestingEnv
+  TEST: myTestingEnv2
 
-run-name: myWorkFlowRunName
+run-name: myWorkFlowRunName2
 
 permissions: 
   pull-requests: write
@@ -38,20 +38,20 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - name: myStep1
-        run: echo myStepOne
+      - name: myStep12
+        run: echo myStepOne2
         
-      - name: myStep2
-        run: echo myStepTwo
+      - name: myStep22
+        run: echo myStepTwo2
 
-      - name: myStep3
-        run: echo myStepThree
+      - name: myStep32
+        run: echo myStepThree2
   
   monitor:
     runs-on: ubuntu-latest
     steps:
-      - name: myStep4
-        run: echo ${{secrets.MYSECRETONE}}
+      - name: myStep42
+        run: echo ${{secrets.MYSECRETONE}}2
 
-      - name: myStep5
-        run: echo ${{secrets.GITHUB_TOKEN}}
+      - name: myStep52
+        run: echo ${{secrets.GITHUB_TOKEN}}2
